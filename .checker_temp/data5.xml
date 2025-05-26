@@ -12,8 +12,8 @@
   <line>Command: /home/david/Tema PA/a.out /home/david/Tema PA/InputData/data5.in /home/david/Tema PA/out/data5.out</line>
 </preamble>
 
-<pid>3042</pid>
-<ppid>3006</ppid>
+<pid>4743</pid>
+<ppid>4706</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -38,7 +38,7 @@
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:01.562 </time>
+  <time>00:00:00:02.106 </time>
 </status>
 
 <errorcounts>

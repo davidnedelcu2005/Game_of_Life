@@ -72,7 +72,7 @@ if(t == 1){
     free(matrice);
  }
 
-  /*if (t == 4){
+  if (t == 4){
     char **Matrice = malloc(n * sizeof(char *));
     for (i = 0; i < n; i++) {
         Matrice[i] = malloc(m * sizeof(char));
@@ -96,7 +96,7 @@ if(t == 1){
     elibereaza_memorie(root);
     for (int i = 0; i < n; i++) {free(Matrice[i]);}
     free(Matrice);
-}*/
+}
 ///BONUS TASK 2
 if (t == 5) { 
     Stack **s = (Stack**)malloc(k * sizeof(Stack*));

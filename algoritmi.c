@@ -599,7 +599,7 @@ free(drum);
         }
     }
 
-    /* if (root->left) {
+     if (root->left) {
         aplicare_modif(mat_s, root->left->modificari);
        afisare_lant(root->left, mat_s, n, m, fis);
     }
@@ -608,7 +608,7 @@ free(drum);
         aplicare_modif(mat_d, root->right->modificari);
         afisare_lant(root->right, mat_d, n, m, fis);
     }
-*/
+
     for (int i = 0; i < n; i++) {
         free(mat_s[i]);
         free(mat_d[i]);

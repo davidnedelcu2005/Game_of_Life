@@ -12,8 +12,8 @@
   <line>Command: /home/david/Tema PA/a.out /home/david/Tema PA/InputData/data19.in /home/david/Tema PA/out/data19.out</line>
 </preamble>
 
-<pid>3033</pid>
-<ppid>3006</ppid>
+<pid>4744</pid>
+<ppid>4706</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -32,20 +32,71 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.072 </time>
+  <time>00:00:00:00.081 </time>
 </status>
 
+<error>
+  <unique>0x0</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x484988F</ip>
+      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>free</fn>
+    </frame>
+    <frame>
+      <ip>0x10C54E</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>lant_max</fn>
+    </frame>
+    <frame>
+      <ip>0x10C66C</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>afisare_lant</fn>
+    </frame>
+    <frame>
+      <ip>0x109926</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xb00000008 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+</error>
 
-<status>
-  <state>FINISHED</state>
-  <time>00:00:00:01.393 </time>
-</status>
-
-<errorcounts>
-</errorcounts>
-
-<suppcounts>
-</suppcounts>
-
-</valgrindoutput>
+<error>
+  <unique>0x4</unique>
+  <tid>1</tid>
+  <kind>InvalidFree</kind>
+  <what>Invalid free() / delete / delete[] / realloc()</what>
+  <stack>
+    <frame>
+      <ip>0x484988F</ip>
+      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>free</fn>
+    </frame>
+    <frame>
+      <ip>0x10C54E</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>lant_max</fn>
+    </frame>
+    <frame>
+      <ip>0x10C66C</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>afisare_lant</fn>
+    </frame>
+    <frame>
+      <ip>0x10C87C</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>afisare_lant</fn>
+    </frame>
+    <frame>
+      <ip>0x109926</ip>
+      <obj>/home/david/Tema PA/a.out</obj>
+      <fn>main</fn>
+    </frame>
+  </stack>
+  <auxwhat>Address 0xb00000009 is not stack'd, malloc'd or (recently) free'd</auxwhat>
+</error>
 

@@ -4,18 +4,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-void citire(char*** M ,int *n, int *m, int *k,int *t, const char *fisier)
+void citire(char*** M ,int *n, int *m, int *k,int *t, FILE *fisier)
 {
-    FILE *fis = fopen(fisier, "rt");
-    if (fis == NULL)
-    {
-        puts("eroare la deschiderea fisierului");
-        exit(1);
-    }
+   
 
-    fscanf(fis , "%d" , t);
-    fscanf(fis,"%d%d" , n, m);
-    fscanf(fis,"%d", k);
+    fscanf(fisier , "%d" , t);
+    fscanf(fisier,"%d%d" , n, m);
+    fscanf(fisier,"%d", k);
 
     
      (*M) = (char**)malloc((*n) * sizeof(char*));
@@ -35,13 +30,13 @@ void citire(char*** M ,int *n, int *m, int *k,int *t, const char *fisier)
         }}
         for(int i=0;i<(*n);i++)
         {
-            fscanf(fis,"%150s", *((*M)+i));
+            fscanf(fisier,"%150s", *((*M)+i));
          
             ///fgets(*((*M)+i),150,fis);
         }
     
 
-    fclose(fis); 
+    
 }
 
 void salvare(char **M, int n, int m, const char *fisier)
@@ -49,7 +44,7 @@ void salvare(char **M, int n, int m, const char *fisier)
     FILE *fis = fopen(fisier, "wt");
     if (fis == NULL)
     {
-        puts("eroare la deschiderea fisierului");
+        puts("eroare");
         exit(1);
     }
 
@@ -67,7 +62,7 @@ void salvare2(char **M, int n, int m, const char *fisier)
     FILE *fis = fopen(fisier, "a");
     if (fis == NULL)
     {
-        puts("eroare la deschiderea fisierului");
+        puts("eroare");
         exit(1);
     }
 
@@ -162,7 +157,7 @@ void generare(char **M, int n, int m)
     char **M2= (char **)malloc(n* sizeof(char*));
    
     if (M2== NULL) {
-        printf("Eroare la alocarea memoriei\n");
+        printf("eroare");
     }
     
 
@@ -212,7 +207,7 @@ Stack* generare2(char **M, int n, int m)
     char **M2= (char **)malloc(n* sizeof(char*));
     Stack* s = createStack();
     if (M2== NULL) {
-        printf("Eroare la alocarea memoriei\n");
+        printf("eroare");
     }
     
 
@@ -317,7 +312,7 @@ Stack* generare3(char **M, int n, int m)
     char **M2= (char **)malloc(n* sizeof(char*));
     Stack* s = createStack();
     if (M2== NULL) {
-        printf("Eroare la alocarea memoriei\n");
+        printf("eroare");
     }
     
 
@@ -604,7 +599,7 @@ free(drum);
         }
     }
 
-     if (root->left) {
+    /* if (root->left) {
         aplicare_modif(mat_s, root->left->modificari);
        afisare_lant(root->left, mat_s, n, m, fis);
     }
@@ -613,7 +608,7 @@ free(drum);
         aplicare_modif(mat_d, root->right->modificari);
         afisare_lant(root->right, mat_d, n, m, fis);
     }
-
+*/
     for (int i = 0; i < n; i++) {
         free(mat_s[i]);
         free(mat_d[i]);

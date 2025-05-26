@@ -12,8 +12,8 @@
   <line>Command: /home/david/Tema PA/a.out /home/david/Tema PA/InputData/data17.in /home/david/Tema PA/out/data17.out</line>
 </preamble>
 
-<pid>4374</pid>
-<ppid>4329</ppid>
+<pid>3048</pid>
+<ppid>3006</ppid>
 <tool>memcheck</tool>
 
 <args>
@@ -32,83 +32,16 @@
 
 <status>
   <state>RUNNING</state>
-  <time>00:00:00:00.088 </time>
+  <time>00:00:00:00.038 </time>
 </status>
-
-<error>
-  <unique>0x0</unique>
-  <tid>1</tid>
-  <kind>InvalidFree</kind>
-  <what>Invalid free() / delete / delete[] / realloc()</what>
-  <stack>
-    <frame>
-      <ip>0x484988F</ip>
-      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>free</fn>
-    </frame>
-    <frame>
-      <ip>0x10C055</ip>
-      <obj>/home/david/Tema PA/a.out</obj>
-      <fn>lant_max</fn>
-    </frame>
-    <frame>
-      <ip>0x10C173</ip>
-      <obj>/home/david/Tema PA/a.out</obj>
-      <fn>afisare_lant</fn>
-    </frame>
-    <frame>
-      <ip>0x1096FA</ip>
-      <obj>/home/david/Tema PA/a.out</obj>
-      <fn>main</fn>
-    </frame>
-  </stack>
-  <auxwhat>Address 0xe00000009 is not stack'd, malloc'd or (recently) free'd</auxwhat>
-</error>
 
 
 <status>
   <state>FINISHED</state>
-  <time>00:00:00:02.173 </time>
+  <time>00:00:00:01.096 </time>
 </status>
 
-<error>
-  <unique>0x4</unique>
-  <tid>1</tid>
-  <kind>Leak_DefinitelyLost</kind>
-  <xwhat>
-    <text>32 bytes in 4 blocks are definitely lost in loss record 1 of 1</text>
-    <leakedbytes>32</leakedbytes>
-    <leakedblocks>4</leakedblocks>
-  </xwhat>
-  <stack>
-    <frame>
-      <ip>0x4846828</ip>
-      <obj>/usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
-      <fn>malloc</fn>
-    </frame>
-    <frame>
-      <ip>0x10BF4F</ip>
-      <obj>/home/david/Tema PA/a.out</obj>
-      <fn>lant_max</fn>
-    </frame>
-    <frame>
-      <ip>0x10C173</ip>
-      <obj>/home/david/Tema PA/a.out</obj>
-      <fn>afisare_lant</fn>
-    </frame>
-    <frame>
-      <ip>0x1096FA</ip>
-      <obj>/home/david/Tema PA/a.out</obj>
-      <fn>main</fn>
-    </frame>
-  </stack>
-</error>
-
 <errorcounts>
-  <pair>
-    <count>4</count>
-    <unique>0x0</unique>
-  </pair>
 </errorcounts>
 
 <suppcounts>

@@ -29,7 +29,7 @@ void deleteStack(Stack**s);
 void printStack(Stack *s);
 void elibereaza(Stack* s);
 void afisarestack(const Stack *s, FILE *fis,int k);
-void citire(char*** M ,int *n, int *m, int *k,int *t, const char *fisier);
+void citire(char*** M ,int *n, int *m, int *k,int *t, FILE *fisier);
 void salvare(char **M, int n, int m, const char *fisier);
 void salvare2(char **M, int n, int m, const char *fisier);
 int vecini(char **M, int n, int m, int i, int j); 
